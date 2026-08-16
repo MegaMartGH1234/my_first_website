@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Interactive Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#home" class="logo">MY<span>WEB</span></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav id="navMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#media">Videos</a>
+      <a href="#contact">Contact</a>
+      <button id="logoutBtn" class="small-btn">Logout</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content reveal">
+      <p class="eyebrow">WELCOME TO MY WEBSITE</p>
+      <h1>Hello, <span id="visitorName">Friend</span> 👋</h1>
+      <p class="hero-text">
+        This is an interactive webpage built with HTML, CSS and JavaScript.
+        Explore the animations, videos and interactive features.
+      </p>
+      <div class="hero-actions">
+        <a href="#media" class="primary-btn">Watch Videos</a>
+        <a href="#about" class="secondary-btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="hero-photo reveal">
+      <div class="photo-ring"></div>
+      <img src="assets/profile.png" alt="Profile picture">
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="section-heading reveal">
+      <p class="eyebrow">ABOUT</p>
+      <h2>My Interactive Space</h2>
+      <p>Hover over the cards, click the buttons and try the interactive features.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card-icon">⚡</div>
+        <h3>Animated</h3>
+        <p>Smooth entrance animations, floating effects and hover interactions.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">🎬</div>
+        <h3>Video</h3>
+        <p>A responsive video area where you can add YouTube or your own MP4 videos.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card-icon">🖱️</div>
+        <h3>Interactive</h3>
+        <p>JavaScript controls the login, theme switcher, counter and other actions.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="media" class="section media-section">
+    <div class="section-heading reveal">
+      <p class="eyebrow">MEDIA</p>
+      <h2>Video Showcase</h2>
+      <p>Replace the sample YouTube IDs with your own videos.</p>
+    </div>
+
+    <div class="video-grid">
+      <div class="video-card reveal">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/ScMzIvxBSi4"
+            title="Sample video"
+            allowfullscreen></iframe>
+        </div>
+        <h3>Featured Video</h3>
+        <p>Replace this with your own video.</p>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-frame">
+          <iframe
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            title="Sample video"
+            allowfullscreen></iframe>
+        </div>
+        <h3>Second Video</h3>
+        <p>You can add as many videos as you want.</p>
+      </div>
+    </div>
+
+    <div class="local-video reveal">
+      <h3>Use Your Own MP4 Video</h3>
+      <p>Put a video named <code>my-video.mp4</code> inside the <code>assets</code> folder.</p>
+      <video controls poster="assets/profile.png">
+        <source src="assets/my-video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+  </section>
+
+  <section class="section interactive-section">
+    <div class="section-heading reveal">
+      <p class="eyebrow">TRY IT</p>
+      <h2>Interactive Counter</h2>
+    </div>
+    <div class="counter-box reveal">
+      <button class="circle-btn" id="minusBtn">−</button>
+      <span id="counter">0</span>
+      <button class="circle-btn" id="plusBtn">+</button>
+    </div>
+    <button class="secondary-btn" id="resetBtn">Reset Counter</button>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="contact-card reveal">
+      <p class="eyebrow">CONTACT</p>
+      <h2>Send a Message</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="Write your message..." rows="5" required></textarea>
+        <button class="primary-btn" type="submit">Send Message</button>
+        <p id="contactMessage" class="message"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> My Interactive Website</p>
+  </footer>
+
+  <button id="themeBtn" class="theme-btn" title="Toggle theme">🌙</button>
+  <button id="topBtn" class="top-btn" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

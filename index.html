@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+  <div class="particles" aria-hidden="true"></div>
+
+  <main class="login-card">
+    <div class="profile-wrap">
+      <img src="assets/profile.png" alt="Profile picture" class="profile-pic">
+    </div>
+
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Sign in to enter my interactive webpage</p>
+
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input id="username" type="text" placeholder="Enter your name" required>
+
+      <label for="password">Password</label>
+      <div class="password-box">
+        <input id="password" type="password" placeholder="Enter password" required>
+        <button type="button" id="togglePassword" class="icon-btn">Show</button>
+      </div>
+
+      <button class="primary-btn" type="submit">Login <span>→</span></button>
+      <p id="loginMessage" class="message"></p>
+    </form>
+
+    <p class="hint">Demo login: any username + <strong>1234</strong></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
